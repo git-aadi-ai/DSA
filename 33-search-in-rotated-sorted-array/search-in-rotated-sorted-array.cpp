@@ -37,13 +37,13 @@ public:
             }
             else
             {
-                if(target>nums[n-1])
+                if(target<=nums[n-1])
                 {
-                    high=mid-1;
+                    low=mid+1;
                 }
                 else
                 {
-                    low=mid+1;
+                     high=mid-1;
                 }
             }
         }
