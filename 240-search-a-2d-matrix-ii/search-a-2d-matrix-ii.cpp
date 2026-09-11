@@ -16,7 +16,7 @@ public:
             row--;
             continue;
           }
-          else if(matrix[row][col] < target) // agar aapne 2 if lgake rakhe hai the dono if check check honge agar ek if ne row ki value ko -1 kr bhi diya tab bhi same loop me dusri if ki condition check hogi so else either use continue or else if 
+          else if(matrix[row][col] < target) // agar aapne 2 if lgake rakhe hai the dono if check  honge agar ek if ne row ki value ko -1 kr bhi diya tab bhi same loop me dusri if ki condition check hogi so either use continue or else if 
           {
             col++;
           }
@@ -24,3 +24,7 @@ public:
         return false;
     }
 };
+//Rule: Agar ek hi loop iteration mein multiple if statements hain, toh saare if independently check hote hain.
+//Agar pehle if ke andar variable ki value change ho gayi, toh next if changed value ke saath check hoga.
+
+//Isliye agar pehle condition true hone ke baad humein same iteration mein aage ka code nahi chalana, toh .//continue use karo, ya mutually exclusive conditions ke liye else if use karo.
