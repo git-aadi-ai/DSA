@@ -16,7 +16,7 @@ public:
             row--;
             continue;
           }
-          if(matrix[row][col] < target)
+          else if(matrix[row][col] < target) // agar aapne 2 if lgake rakhe hai the dono if check check honge agar ek if ne row ki value ko -1 kr bhi diya tab bhi same loop me dusri if ki condition check hogi so else either use continue or else if 
           {
             col++;
           }
