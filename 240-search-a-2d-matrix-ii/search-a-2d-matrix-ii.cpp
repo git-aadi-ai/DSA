@@ -14,8 +14,9 @@ public:
           if(matrix[row][col] > target)
           {
             row--;
+            continue;
           }
-          else if(matrix[row][col] < target)
+          if(matrix[row][col] < target)
           {
             col++;
           }
