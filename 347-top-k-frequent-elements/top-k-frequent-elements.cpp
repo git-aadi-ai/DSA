@@ -31,8 +31,8 @@ public:
             }
             else
             {
-                int t = pq.top().first;
-                if(p.first > t)
+               //int t = pq.top().first;
+                if(p > pq.top())
                 {
                     pq.pop();
                     pq.push(p);
