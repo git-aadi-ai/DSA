@@ -43,10 +43,7 @@ while(!pq.empty())
    }
    else
    {
-    if(pq.empty())
-    {
-        return ans;
-    }
+    
    pair<int,int>p2=pq.top();
    pq.pop(); 
    ans.push_back(p2.second);
