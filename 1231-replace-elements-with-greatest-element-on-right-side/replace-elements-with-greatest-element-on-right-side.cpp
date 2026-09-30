@@ -8,6 +8,7 @@ public:
        vector<int>ans;
        while(i<n-1)
        {
+        int largest = INT_MIN; 
         int j=i+1;        
         while(j<n)
         {
@@ -15,7 +16,6 @@ public:
          j++;
         }
         ans.push_back(largest);
-        largest=INT_MIN;
         i++;
        } 
        ans.push_back(-1);
