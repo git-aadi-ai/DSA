@@ -1,24 +1,14 @@
 class Solution {
 public:
     vector<int> replaceElements(vector<int>& arr) {
-       int largest = INT_MIN; 
-       int n=arr.size();
-       int i=0;
-       int j=i+1;
-       vector<int>ans;
-       while(i<n-1)
-       {
-        int largest = INT_MIN; 
-        int j=i+1;        
-        while(j<n)
+        int n=arr.size();
+        int largest=-1;
+        for(int i=n-1;i>=0;i--)
         {
-         largest=max(largest,arr[j]);
-         j++;
+            int temp=arr[i];
+            arr[i]=largest;
+            largest=max(largest,temp);
         }
-        ans.push_back(largest);
-        i++;
-       } 
-       ans.push_back(-1);
-       return ans;
+        return arr;
     }
 };
