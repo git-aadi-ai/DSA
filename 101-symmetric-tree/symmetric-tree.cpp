@@ -30,10 +30,6 @@ public:
         return (t1&&t2);
     }
     bool isSymmetric(TreeNode* root) {
-        if(root==NULL)
-        {
-            return true;
-        }
         bool ans = fun(root->left , root->right);
         return ans;
     }
