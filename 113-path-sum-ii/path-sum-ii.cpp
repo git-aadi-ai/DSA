@@ -18,7 +18,8 @@ public:
         {
             return ;
         }
-        sum=sum+root->val; diary.push_back(root->val);
+        sum=sum+root->val;
+        diary.push_back(root->val);
         if(root->left==NULL && root->right==NULL)
         {
             if(sum==target)
