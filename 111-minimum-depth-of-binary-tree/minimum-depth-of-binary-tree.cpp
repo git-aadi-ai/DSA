@@ -11,28 +11,31 @@
  */
 class Solution {
 public:
-    int fun(TreeNode*root)
+    void fun(TreeNode*root,int &depth,int temp)
     {
         if(root==NULL)
         {
-            return 0;
+            return;
         }
+        temp++;
         if(root->left==NULL && root->right==NULL)
         {
-            return 1;
+            depth=min(temp,depth);
+            temp=0;
+            return;
         }
-        if(root->left==NULL)
-        {
-            return 1+fun(root->right);
-        }
-        if(root->right==NULL)
-        {
-            return 1+fun(root->left);
-        }
-        return 1+ min(fun(root->left),fun(root->right));
+        fun(root->left,depth,temp);
+        fun(root->right,depth,temp);
+        return ;        
     }
     int minDepth(TreeNode* root) {
-       int ans = fun(root);
-       return ans; 
+     int temp=0;
+     int depth = INT_MAX;  
+     fun(root,depth,temp);
+     if(depth==INT_MAX)
+     {
+        return 0;
+     }
+     return depth;
     }
 };
